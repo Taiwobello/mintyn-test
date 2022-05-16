@@ -20,9 +20,38 @@ const statsData = [
     },
 ]
 
+const tableColumn = ["Item Type", "Price", "Transaction No", "Time",]
+
+const tableData = [
+    {
+        item: "Apple Mac Book 15” 250 SSD 12GB",
+        price: "$73430",
+        transactionNo: "1234567890",
+        time: "12:30"
+    },
+    {
+        item: "Apple Mac Book 15” 250 SSD 12GB",
+        price: "$73430",
+        transactionNo: "1234567890",
+        time: "12:30"
+    },
+    {
+        item: "Apple Mac Book 15” 250 SSD 12GB",
+        price: "$73430",
+        transactionNo: "1234567890",
+        time: "12:30"
+    },
+    {
+        item: "Apple Mac Book 15” 250 SSD 12GB",
+        price: "$73430",
+        transactionNo: "1234567890",
+        time: "12:30"
+    }
+]
+
 function Body() {
     return (
-        <div className={styles.content}>
+        <main className={styles.content}>
             <div className={`${styles.stats_container}`}>
                 {
                     statsData.map((data, index) => {
@@ -71,7 +100,56 @@ function Body() {
                     </div>
                 </div>
             </div>
-        </div>
+            <div>
+                <p className='text-x-large my-4'>Payments</p>
+                <div className='flex align-center'>
+                    <p className='text-medium'>Showing <span style={{ color: "#1875F0" }}>20</span> out of 500 payments</p>
+
+                    <div className={styles.search_container}>
+                        <label htmlFor='nav-input' ><img src='./icons/search.svg' alt='logo' /></label>
+                        <input placeholder='Search Payments' type="text" className={styles.input} id="nav-input" />
+                    </div>
+                </div>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+
+                        {
+                            tableColumn.map((column) => (<th>{column}</th>))
+                        }
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {
+                        tableData.map((data) => (
+                            <tr>
+                                <td>{data.item}</td>
+                                <td>{data.price}</td>
+                                <td>{data.transactionNo}</td>
+                                <td>{data.time}</td>
+                                <td><img src='./icons/arrow-down.svg' /></td>
+                            </tr>
+
+
+                        ))
+                    }
+                </tbody>
+
+            </table>
+            <div className='flex justify-between '>
+                <p className='text-medium'>Showing 1 to 10 of 500 entries</p>
+                <div className={styles.paginate}>
+                    <span className='bold'>Previous</span>
+                    <span style={{ backgroundColor: "#1875F0" }}>1</span>
+                    <span>2</span>
+                    <span className='bold'>next</span>
+                </div>
+            </div>
+        </main>
     )
 }
 

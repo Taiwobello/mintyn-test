@@ -1,6 +1,7 @@
 .content{
     margin-left: 5rem;
     width: 70%;
+    margin-bottom: 10rem;
 
     .stats{
         background-color: white;
@@ -36,7 +37,82 @@
         }
     }
 
+    .search_container{
+        position: relative;
+        margin-left: 5rem;
+        label{
+            position: absolute;
+            top: 1.4rem;
+            left: 2rem;
+
+        }
+
+        .input {
+            margin-left: 1.6rem;
+            font-size: 1.2rem;
+            padding: 1rem;
+            padding-left: 2rem;
+            width: 300px;
+            border: none;
+            border-bottom: 1px solid #787878;
+            background-color: transparent;
+          }
+    }
+
+    .paginate{
+        span{   
+            border: 1px solid #CED0DA;
+            padding: 0.7rem 1rem;
+            font-size: 1.6rem;
+            
+        }
+        
+    }
+
     
 }
 
 
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4rem 0;
+  
+    thead{
+      padding: 1.2rem;
+      
+  
+      tr{
+        background-color: #EAEEF0;
+      }
+    }
+  
+    th, td {
+      padding: 1rem 0;
+      text-align: left;
+    
+      &:first-child{
+        padding-left: 3rem;
+      }
+    }
+  
+    th{
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: #7F8FA4;
+    }
+  
+    td{
+      font-size: 1.4rem;
+      padding: 2rem 0;
+    }
+  
+    tbody{
+      background-color: white;
+    
+      tr{
+        border-bottom: 2px solid #CCCFD4;
+      }
+    }
+  }
