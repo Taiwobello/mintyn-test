@@ -59,6 +59,7 @@ function SIdeBar() {
     const [active, setActive] = useState('Overview');
     return (
         <nav className={styles.side_bar}>
+            <p className={styles.gen_invoice}  >GENERATE INVOICE</p>
             <ul className={styles.side_bar_list}>
                 {sideBar.map((item, index) => {
                     return (
