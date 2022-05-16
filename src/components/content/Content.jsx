@@ -61,7 +61,7 @@ function Body() {
                                     <p className='text-small'>{data.title}</p>
                                     <p className='text-medium'>{data.value}</p>
                                 </div>
-                                <img src='./icons/small-chart.svg' />
+                                <img src='./icons/small-chart.svg' alt='chart' />
                             </div>
                         )
                     })
@@ -77,20 +77,20 @@ function Body() {
                                 <img src='./icons/right-button.svg' alt='right arrow' />
                             </div>
                         </div>
-                        <img className={styles.full_stats_img} src='./icons/full-stat.svg' />
+                        <img className={styles.full_stats_img} src='./icons/full-stat.svg' alt='statistics' />
                     </div>
                     <div>
                         <ul className='px-5'>
                             <li className={`${styles.stats_detail} mb-5`}>
                                 <p className="text-medium bold mb-2">Orders</p>
-                                <img src='./icons/stats-line.svg' />
+                                <img src='./icons/stats-line.svg' alt='statistics' />
                                 <p className='text-medium  mb-2'>Pending Orders: <span style={{ color: "#FDC203" }} className='bold'>20</span></p>
                                 <p className='text-medium mb-2'>Reconcilled Orders: <span style={{ color: "#27AE60" }} className='bold'>80</span></p>
                                 <p className='text-medium mb-2'>Total Orders: <span style={{ color: "#1875F0" }} className='bold'>100</span></p>
                             </li>
                             <li className={styles.stats_detail}>
                                 <p className="text-medium bold mb-2">Payments</p>
-                                <img src='./icons/stats-line.svg' />
+                                <img src='./icons/stats-line.svg' alt='statistics' />
                                 <p className='text-medium  mb-2'>Pending Payments: <span style={{ color: "#FDC203" }} className='bold'>20</span></p>
                                 <p className='text-medium mb-2'>Reconcilled Payments: <span style={{ color: "#27AE60" }} className='bold'>80</span></p>
                                 <p className='text-medium mb-2'>Total Payments: <span style={{ color: "#1875F0" }} className='bold'>100</span></p>
@@ -117,7 +117,7 @@ function Body() {
                     <tr>
 
                         {
-                            tableColumn.map((column) => (<th>{column}</th>))
+                            tableColumn.map((column, index) => (<th key={index}>{column}</th>))
                         }
                         <th></th>
                     </tr>
@@ -125,13 +125,13 @@ function Body() {
                 <tbody>
 
                     {
-                        tableData.map((data) => (
-                            <tr>
+                        tableData.map((data, index) => (
+                            <tr key={index}>
                                 <td>{data.item}</td>
                                 <td>{data.price}</td>
                                 <td>{data.transactionNo}</td>
                                 <td>{data.time}</td>
-                                <td><img src='./icons/arrow-down.svg' /></td>
+                                <td><img src='./icons/arrow-down.svg' alt='down arrow' /></td>
                             </tr>
 
 
@@ -155,9 +155,3 @@ function Body() {
 
 export default Body
 
-
-function Stats() {
-    return (
-        <div>Stats</div>
-    )
-}

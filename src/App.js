@@ -1,4 +1,4 @@
-import Body from "./components/body/Content";
+import Body from "./components/content/Content";
 import Navbar from "./components/navbar/Navbar";
 import SIdeBar from "./components/side-bar/SideBar";
 
