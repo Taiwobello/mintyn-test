@@ -1,0 +1,30 @@
+.side_bar {
+  padding: 3rem 0;
+  width: 270px;
+  height: 100%;
+  background-color: white;
+
+  .nav_title {
+    font-size: 1.4rem;
+    cursor: pointer;
+  }
+
+  .nav_children {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 3rem;
+    width: 100%;
+
+    // &::before{
+    //   content: "";
+    //   position: absolute;
+    //   background-color: black;
+    //   height: 100%;
+    //   width: 1px;
+    // }
+
+    &:not(:last-child) {
+      margin-bottom: 1.7rem;
+    }
+  }
+}
