@@ -14,17 +14,5 @@
     align-items: center;
     padding: 1rem 3rem;
     width: 100%;
-
-    // &::before{
-    //   content: "";
-    //   position: absolute;
-    //   background-color: black;
-    //   height: 100%;
-    //   width: 1px;
-    // }
-
-    &:not(:last-child) {
-      margin-bottom: 1.7rem;
-    }
   }
 }
