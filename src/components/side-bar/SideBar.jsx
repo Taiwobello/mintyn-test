@@ -59,13 +59,13 @@ function SIdeBar() {
     const [active, setActive] = useState('Overview');
     return (
         <nav className={styles.side_bar}>
-            <ul>
+            <ul className={styles.side_bar_list}>
                 {sideBar.map((item, index) => {
                     return (
                         <li key={index}>
-                            <div className="my-4 ">
+                            <div className="my-4 px-5">
                                 {item.icon_src && <img src={`icons/${item.icon_src}`} alt={item.title} className="mr-3" />}
-                                <span className={`${styles.nav_title} px-5`}>{item.title}</span>
+                                <span className={`${styles.nav_title}`}>{item.title}</span>
                             </div>
 
                             <ul>
